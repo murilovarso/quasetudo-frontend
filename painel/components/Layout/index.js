@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
         <div
           className={sidebarOpen ? 'block' : 'hidden'}
           onClick={close}
-          //className='fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden'
+          className='fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden'
         ></div>
 
         <div
@@ -29,13 +29,16 @@ const Layout = ({ children }) => {
               : '-translate-x-full ease-in')
           }
         >
-          <Menu.Brand>QuaseTudo</Menu.Brand>
+          <Menu.Brand>DevShop</Menu.Brand>
           <Menu.Nav>
             <Menu.NavItem href='/' Icon={MdHome}>
               Home
             </Menu.NavItem>
             <Menu.NavItem href='/categories' Icon={MdLabel}>
               Categorias
+            </Menu.NavItem>
+            <Menu.NavItem href='/products' Icon={MdLabel}>
+              Produtos
             </Menu.NavItem>
           </Menu.Nav>
         </div>

@@ -61,17 +61,17 @@ const Index = () => {
                       <div className='flex-shrink-0 h-10 w-10'>
                         <img
                           className='h-10 w-10 rounded-full'
-                          src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+                          src='https://triunfo.pe.gov.br/pm_tr430/wp-content/uploads/2018/03/sem-foto.jpg'
                           alt=''
                         />
                       </div>
 
                       <div className='ml-4'>
                         <div className='text-sm leading-5 font-medium text-gray-900'>
-                          John Doe
+                          Murilo
                         </div>
                         <div className='text-sm leading-5 text-gray-500'>
-                          john@example.com
+                          murilo@gmail.com
                         </div>
                       </div>
                     </div>
@@ -79,10 +79,10 @@ const Index = () => {
 
                   <Table.Td>
                     <div className='text-sm leading-5 text-gray-900'>
-                      Software Engineer
+                      dev
                     </div>
                     <div className='text-sm leading-5 text-gray-500'>
-                      Web dev
+                       dev
                     </div>
                   </Table.Td>
 
@@ -92,7 +92,7 @@ const Index = () => {
                     </span>
                   </Table.Td>
 
-                  <Table.Td>Owner</Table.Td>
+                  <Table.Td>alguma</Table.Td>
 
                   <Table.Td>
                     <a
