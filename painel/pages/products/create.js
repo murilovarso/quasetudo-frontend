@@ -83,7 +83,7 @@ const Index = () => {
     validationSchema: ProductSchema
   })
 
-  // tratar os options
+ 
   let options = []
   if (categories && categories.getAllCategories) {
     options = categories.getAllCategories.map(item => {
