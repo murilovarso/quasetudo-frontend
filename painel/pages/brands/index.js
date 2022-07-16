@@ -59,7 +59,7 @@ const Index = () => {
             <div className='align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200'>
               <Table>
                 <Table.Head>
-                  <Table.Th>Brands</Table.Th>
+                  <Table.Th>Marcas</Table.Th>
                   <Table.Th></Table.Th>
                 </Table.Head>
 

@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
               : '-translate-x-full ease-in')
           }
         >
-          <Menu.Brand>DevShop</Menu.Brand>
+          <Menu.Brand>Quasetudo</Menu.Brand>
           <Menu.Nav>
             <Menu.NavItem href='/' Icon={MdHome}>
               Home
