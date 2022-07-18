@@ -7,55 +7,55 @@ import Title from '../../components/Title'
 import Alert from '../../components/Alert'
 import { useMutation, useQuery } from '../../lib/graphql'
 
-const DELETE_CATEGORY = `
-mutation deleteCategory($id: String!) {
-  panelDeleteCategory (id: $id)
+const DELETE_USER = `
+mutation deleteUser($id: String!) {
+  panelDeleteUser (id: $id)
 }
 `
 
-const GET_ALL_CATEGORIES = `
+const GET_ALL_USERS = `
     query {
-      getAllCategories{
+      panelGetAllUsers{
         id
         name
-        slug
+        email
       }
     }
   `
 
 const Index = () => {
-  const { data, mutate } = useQuery(GET_ALL_CATEGORIES)
-  const [deleteData, deleteCategory] = useMutation(DELETE_CATEGORY)
+  const { data, mutate } = useQuery(GET_ALL_USERS)
+  const [deleteData, deleteUser] = useMutation(DELETE_USER)
   const remove = id => async () => {
-    await deleteCategory({ id })
+    await deleteUser({ id })
     mutate()
   }
   return (
     <Layout>
-      <Title>Gerenciar categorias</Title>
+      <Title>Gerenciar usuários</Title>
       <div className='mt-8'></div>
       <div>
-        <Button.Link href='/categories/create'>Criar categoria</Button.Link>
+        <Button.Link href='/users/create'>Criar usuário</Button.Link>
       </div>
       <div className='flex flex-col mt-8'>
         <div className='-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8'>
-          {data && data.getAllCategories && data.getAllCategories.length === 0 && (
+          {data && data.panelGetAllUsers && data.panelGetAllUsers.length === 0 && (
             <Alert>
-              <p>Nenhuma categoria criada.</p>
+              <p>Nenhum usuário criado até o momento.</p>
             </Alert>
           )}
-          {data && data.getAllCategories && data.getAllCategories.length > 0 && (
+          {data && data.panelGetAllUsers && data.panelGetAllUsers.length > 0 && (
             <div className='align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200'>
               <Table>
                 <Table.Head>
-                  <Table.Th>Categorias</Table.Th>
+                  <Table.Th>Usuários</Table.Th>
                   <Table.Th></Table.Th>
                 </Table.Head>
 
                 <Table.Body>
                   {data &&
-                    data.getAllCategories &&
-                    data.getAllCategories.map(item => {
+                    data.panelGetAllUsers &&
+                    data.panelGetAllUsers.map(item => {
                       return (
                         <Table.Tr key={item.id}>
                           <Table.Td>
@@ -65,16 +65,22 @@ const Index = () => {
                                   {item.name}
                                 </div>
                                 <div className='text-sm leading-5 text-gray-500'>
-                                  {item.slug}
+                                  {item.email}
                                 </div>
                               </div>
                             </div>
                           </Table.Td>
 
                           <Table.Td>
-                            <Link href={`/categories/${item.id}/edit`}>
+                            <Link href={`/users/${item.id}/passwd`}>
                               <a className='text-indigo-600 hover:text-indigo-900'>
-                                Editar
+                                Alterar senha
+                              </a>
+                            </Link>{' '}
+                            |{' '}
+                            <Link href={`/users/${item.id}/edit`}>
+                              <a className='text-indigo-600 hover:text-indigo-900'>
+                                Edit
                               </a>
                             </Link>{' '}
                             |{' '}
@@ -83,7 +89,7 @@ const Index = () => {
                               className='text-indigo-600 hover:text-indigo-900'
                               onClick={remove(item.id)}
                             >
-                              Remover
+                              Remove
                             </a>
                           </Table.Td>
                         </Table.Tr>

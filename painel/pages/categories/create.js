@@ -9,7 +9,7 @@ import Input from '../../components/Input'
 
 const CREATE_CATEGORY = `
     mutation createCategory($name: String!, $slug: String!) {
-      createCategory (input: {
+      panelCreateCategory (input: {
         name: $name,
         slug: $slug
       }) {
