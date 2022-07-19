@@ -32,7 +32,7 @@ const Cart = ({ brands, categories }) => {
     <>
       <Layout categories={categories}>
         <Seo />
-        <h1 className='font-bold text-3xl'>DevShop - Carrinho</h1>
+        <h1 className='font-bold text-3xl'>QuaseTudo Carrinho</h1>
         {cart.size > 0 && (
           <div className='flex justify-center my-6'>
             <div className='flex flex-col w-full p-8 text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5'>

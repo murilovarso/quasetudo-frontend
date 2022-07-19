@@ -31,7 +31,7 @@ const Index = ({ brands, categories }) => {
     <>
       <Layout categories={categories}>
         <Seo />
-        <h1>DevShop</h1>
+        <h1>QuaseTudo</h1>
         <pre>{JSON.stringify(cart, null, 2)}</pre>
         <button
           onClick={() =>

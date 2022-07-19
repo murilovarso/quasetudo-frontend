@@ -9,7 +9,7 @@ const Brands = ({ brands }) => {
             Nossas Marcas
           </h1>
           <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
-            As melhores marcas você encontra aqui no DevShop.
+            As melhores marcas você encontra aqui.
           </p>
         </div>
         <div className='flex flex-wrap -m-4'>
