@@ -20,6 +20,7 @@ const GET_ALL_PRODUCTS = `
         name
         slug
         description
+        
       }
     }
   `
@@ -59,6 +60,7 @@ const Index = () => {
                     data.getAllProducts.map(item => {
                       return (
                         <Table.Tr key={item.id}>
+                          <Table.Td></Table.Td>
                           <Table.Td>
                             <div className='flex items-center'>
                               <div>
@@ -73,6 +75,12 @@ const Index = () => {
                           </Table.Td>
 
                           <Table.Td>
+                            <Link href={`/products/${item.id}/images`}>
+                              <a className='text-indigo-600 hover:text-indigo-900'>
+                                Imagens
+                              </a>
+                            </Link>{' '}
+                            |{' '}
                             <Link href={`/products/${item.id}/edit`}>
                               <a className='text-indigo-600 hover:text-indigo-900'>
                                 Edit
