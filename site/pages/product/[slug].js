@@ -82,10 +82,7 @@ const Brand = ({ product, categories }) => {
 
   return (
     <Layout categories={categories}>
-      <h1>Brand</h1>
-
-      <pre>selectedVariation {JSON.stringify(selectedVariation, null, 2)}</pre>
-
+   
       <section className='text-gray-600 body-font overflow-hidden'>
         <div className='container px-5 py-24 mx-auto'>
           <div className='lg:w-4/5 mx-auto flex flex-wrap'>
@@ -229,7 +226,6 @@ const Brand = ({ product, categories }) => {
               </div>
               <p className='leading-relaxed'>
                 {product.description}{' '}
-                {/* <pre>{JSON.stringify(product, null, 2)}</pre>*/}
               </p>
               <div className='flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5'>
                 <div className='flex items-center'>

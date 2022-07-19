@@ -2,21 +2,6 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 export const CartContext = createContext({})
 
-/*
-  const cart = {
-    items: {
-      idUUID: {
-        quantity: 10,
-        subTotal: 10,
-        ...
-      }
-    },
-    addToCart: (id, data) => 10,
-    removeFromCart: (id) => 10,
-    size: 0,
-    subTotal: 10
-  }
-*/
 
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState({})
@@ -48,10 +33,10 @@ export const CartProvider = ({ children }) => {
       const newCart = { ...current }
       if (current[product.id]) {
         if (current[product.id].qtd[variationId]) {
-          // produto existe carrinho, variacao existe carrinho
+      
           current[product.id].qtd[variationId].qtd++
         } else {
-          // produto existe carrinho, variacao nao existe
+    
           current[product.id].qtd = {
             ...current[product.id].qtd,
             [variationId]: {

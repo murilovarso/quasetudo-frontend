@@ -16,7 +16,7 @@ const Dashboard = () => {
               <MdHome className='h-8 w-8 text-white' />
             </Card.Icon>
             <Card.Data>
-              <Card.Title>2000</Card.Title>
+              <Card.Title>250</Card.Title>
               <Card.Description>Produtos</Card.Description>
             </Card.Data>
           </Card>
@@ -26,19 +26,11 @@ const Dashboard = () => {
               <MdHome className='h-8 w-8 text-white' />
             </Card.Icon>
             <Card.Data>
-              <Card.Title>2000</Card.Title>
-              <Card.Description>Produtos</Card.Description>
+              <Card.Title>100</Card.Title>
+              <Card.Description>Vendas</Card.Description>
             </Card.Data>
           </Card>
-          <Card>
-            <Card.Icon>
-              <MdHome className='h-8 w-8 text-white' />
-            </Card.Icon>
-            <Card.Data>
-              <Card.Title>2000</Card.Title>
-              <Card.Description>Produtos</Card.Description>
-            </Card.Data>
-          </Card>
+          
         </div>
       </div>
       <div className='mt-8'></div>
@@ -79,10 +71,10 @@ const Dashboard = () => {
 
                   <Table.Td>
                     <div className='text-sm leading-5 text-gray-900'>
-                      dev
+                    Administrador
                     </div>
                     <div className='text-sm leading-5 text-gray-500'>
-                       dev
+                      
                     </div>
                   </Table.Td>
 
@@ -92,7 +84,7 @@ const Dashboard = () => {
                     </span>
                   </Table.Td>
 
-                  <Table.Td>alguma</Table.Td>
+                  <Table.Td>Root</Table.Td>
 
                   <Table.Td>
                     <a

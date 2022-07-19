@@ -1,10 +1,11 @@
 import '../css/style.css'
+import { CartProvider } from '../lib/CartContext'
 
-const App = ({ Component, pageProps }) => {
+function App({ Component, pageProps }) {
   return (
-    <div>
+    <CartProvider>
       <Component {...pageProps} />
-    </div>
+    </CartProvider>
   )
 }
 export default App

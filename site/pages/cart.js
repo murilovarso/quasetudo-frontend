@@ -186,7 +186,6 @@ const Cart = ({ brands, categories }) => {
           </div>
         )}
 
-        {/*<pre>{JSON.stringify(cart, null, 2)}</pre> */}
       </Layout>
     </>
   )

@@ -31,14 +31,12 @@ const Index = ({ brands, categories }) => {
     <>
       <Layout categories={categories}>
         <Seo />
-        <h1>QuaseTudo</h1>
-        <pre>{JSON.stringify(cart, null, 2)}</pre>
         <button
           onClick={() =>
             cart.removeFromCart({ id: '2bcd0543-5e00-4c04-987a-f4737221a188' })
           }
         >
-          Count!
+
         </button>
         <Brands brands={brands} />
       </Layout>
